@@ -5,4 +5,12 @@
     <TargetFramework>net5.0</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\TodoList_BLL\TodoList_BLL.csproj" />
+    <ProjectReference Include="..\TodoList_BLL_Interface\TodoList_BLL_Interface.csproj" />
+    <ProjectReference Include="..\TodoList_DAL\TodoList_DAL.csproj" />
+    <ProjectReference Include="..\TodoList_DAL_Interface\TodoList_DAL_Interface.csproj" />
+    <ProjectReference Include="..\TodoList_Entities\TodoList_Entities.csproj" />
+  </ItemGroup>
+
 </Project>

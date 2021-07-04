@@ -5,6 +5,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\TodoList_DAL_Interface\TodoList_DAL_Interface.csproj" />
     <ProjectReference Include="..\TodoList_Entities\TodoList_Entities.csproj" />
   </ItemGroup>
 

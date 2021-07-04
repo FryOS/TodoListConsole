@@ -1,11 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using TodoList_DAL_Interface;
 using TodoList_Entities;
 
 namespace TodoList_DAL
 {
-    public class TaskDAO
+    public class TaskDAO : ITaskDAO
     {
 
         public int Add(MyTask task)
@@ -23,13 +24,21 @@ namespace TodoList_DAL
             return MemoryDAO.tasks.Values.ToList();
         }
 
-        public MyTask GetBtId(int id)
+        public MyTask GetById(int id)
         {
-            if (MemoryDAO.tasks.TryGetValue(id, out var task))
+            if (!MemoryDAO.tasks.TryGetValue(id, out var task))
             {
                 return null;
             }
             return task;
+        }
+
+        public void RemoveById(int id) 
+        {
+            var itemToRemove = MemoryDAO.tasks.SingleOrDefault(r => r.Value.Id == id);
+            if (itemToRemove.Value != null )
+                MemoryDAO.tasks.Remove(itemToRemove.Key);
+
         }
 
 
