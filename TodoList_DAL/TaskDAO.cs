@@ -41,6 +41,17 @@ namespace TodoList_DAL
 
         }
 
+        public void SortByPriority()
+        {
+            var sortDict = MemoryDAO.tasks.OrderBy(r => r.Value.Priority).Select(r => r);
+        }
+
+        public string SearchByName(string name)
+        {
+            var mytask = MemoryDAO.tasks.FirstOrDefault(x => x.Value.Name == name).Value;
+            return mytask.Name;
+        }
+
 
 
         private static int GetLastId()

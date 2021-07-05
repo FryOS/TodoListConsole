@@ -33,5 +33,15 @@ namespace TodoList_BLL
         {
             return _taskDAO.GetById(id);
         }
+
+        public void SortByPriority()
+        {
+             _taskDAO.SortByPriority();
+        }
+
+        public void SearchByName(string name)
+        {
+            _taskDAO.SearchByName(name);
+        }
     }
 }

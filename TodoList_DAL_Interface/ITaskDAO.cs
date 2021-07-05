@@ -12,6 +12,11 @@ namespace TodoList_DAL_Interface
 
         MyTask GetById(int id);
 
-        void RemoveById(int id)
+        void RemoveById(int id);
+
+        void SortByPriority();
+
+        string SearchByName(string name);
+        
     }
 }

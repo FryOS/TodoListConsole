@@ -12,5 +12,9 @@ namespace TodoList_BLL_Interface
         IEnumerable<MyTask> GetAll();
 
         MyTask GetById(int id);
+
+        void SortByPriority();
+
+        void SearchByName(string name);
     }
 }
